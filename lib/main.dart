@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:praktek_1_flutter/components/header/header_app.dart';
+import 'package:praktek_1_flutter/components/Hero/hero_section.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,12 +26,16 @@ class AppLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: headerApp,
-        backgroundColor: Colors.green,
-      ),
-      body: Text("Tes Boi"),
-    );
+        appBar: AppBar(
+          title: headerApp,
+          backgroundColor: Colors.green,
+        ),
+        body: Container(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: [heroSection],
+          ),
+        )
+      );
   }
 }
-
