@@ -26,18 +26,21 @@ class MyApp extends StatelessWidget {
 class AppLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
+    var container = Container(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: [heroSection, kategoriSection],
+          ),
+        );
+
     return Scaffold(
         backgroundColor: Colors.black87,
         appBar: AppBar(
           title: headerApp,
           backgroundColor: Colors.blue[800],
         ),
-        body: Container(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            children: [heroSection, kategoriSection],
-          ),
-        ));
+        body: container);
   }
 }
 
