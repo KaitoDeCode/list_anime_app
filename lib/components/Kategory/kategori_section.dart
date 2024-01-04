@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 var kategoriSection = Container(
   alignment: Alignment.center,
-  margin: EdgeInsets.only(top: 10.0,bottom: 10.0),
+  padding: EdgeInsets.only(top: 10.0),
   child: Row(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [ 

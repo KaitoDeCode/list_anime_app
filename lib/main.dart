@@ -26,13 +26,12 @@ class MyApp extends StatelessWidget {
 class AppLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
     var container = Container(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            children: [heroSection, kategoriSection],
-          ),
-        );
+      padding: EdgeInsets.all(8.0),
+      child: Column(
+        children: [heroSection, kategoriSection, listAnime],
+      ),
+    );
 
     return Scaffold(
         backgroundColor: Colors.black87,
@@ -44,3 +43,33 @@ class AppLayout extends StatelessWidget {
   }
 }
 
+var listAnime = Container(
+  padding: EdgeInsets.all(10.0),
+  child: Column(
+    children: [itemAnime],
+  ),
+);
+
+var titleSyle = TextStyle(
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+  fontSize: 15,
+);
+
+var itemAnime = Row(
+  children: <Widget>[
+    Image(
+      image: AssetImage("../assets/img/anime/tensura.jpeg"),
+      width: 100.0,
+    ),
+    Column(
+      children: [
+        Text(
+          "Tensei Shittara Slime Datta-ken", style: titleSyle,
+        ),
+        Text(
+            "Anime dengen cerita seorang pemuda yang meninggal dan ber-rengkarnasi menjadi sebuah slime"),
+      ],
+    )
+  ],
+);
